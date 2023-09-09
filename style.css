@@ -185,7 +185,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
     
 }
 .more-link{
-    background-color: #1e9fff;
+    background-color: #eef2f5;
     padding:3px;
     padding-left: 8px;
     padding-right: 8px;
@@ -201,6 +201,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 }
 
 .close{
+    color:#eee !important;
 	background-color: #FFFFFF;
 	padding: 12px;
 	padding-left:20px;

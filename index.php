@@ -41,7 +41,7 @@ $link_icon = $theme_config->link_icon;
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" media="all">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holmes.js/1.17.3/js/holmes.js"></script>
-    <script src="templates/<?php echo $template; ?>/sou.js"></script>
+    
     <link rel='stylesheet' href='templates/<?php echo $template; ?>/style.css?v=<?php echo $info->version; ?>'>
     <?php echo $site['custom_header']; ?>
     <style>
@@ -188,27 +188,121 @@ $link_icon = $theme_config->link_icon;
             <div id="search-list" class="hide-type-list">
                 <div class="search-group group-a s-current" style="padding-left: 20px">
                     <ul class="search-type">
-                        <li><input checked="" hidden="" type="radio" name="type" id="type-baidu"
-                                value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label
-                                for="type-baidu"><span style="color:#2100E0">百度</span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-google"
-                                value="https://www.google.com/search?hl=zh-CN&q=" data-placeholder="谷歌搜索"><label
-                                for="type-google"><span style="color:#3B83FA">G</span><span
-                                    style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span
-                                    style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span
-                                    style="color:#F54231">e</span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-weibo"
-                                value="https://s.weibo.com/weibo?q=" data-placeholder="微博热门搜索"><label
-                                for="type-weibo"><span style="color:#e91e63">微博</span></label></li>
+                        <!-- CZLExpress -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-czl"
+                                value="https://exp.czl.net/track/?query=" data-placeholder="CZLExpress 国际快递查询">
+                            <label for="type-czl"><span style="color:#2ea7e0">CZLExpress</span></label>
+                        </li>
+                        <!-- 百度 -->
+                        <li>
+                            <input checked="" hidden="" type="radio" name="type" id="type-baidu"
+                                value="https://www.baidu.com/s?wd=" data-placeholder="百度一下">
+                            <label for="type-baidu"><span style="color:#2100E0">百度</span></label>
+                        </li>
+
+                        <!-- 谷歌 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-google"
+                                value="https://www.google.com/search?hl=zh-CN&q=" data-placeholder="谷歌搜索">
+                            <label for="type-google">
+                                <span style="color:#3B83FA">G</span>
+                                <span style="color:#F3442C">o</span>
+                                <span style="color:#FFC300">o</span>
+                                <span style="color:#4696F8">g</span>
+                                <span style="color:#2CAB4E">l</span>
+                                <span style="color:#F54231">e</span>
+                            </label>
+                        </li>
+
+                        <!-- 微博 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-weibo"
+                                value="https://s.weibo.com/weibo?q=" data-placeholder="微博热门搜索">
+                            <label for="type-weibo"><span style="color:#e91e63">微博</span></label>
+                        </li>
+
+                        <!-- 必应 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-bing"
+                                value="https://www.bing.com/search?q=" data-placeholder="必应搜索">
+                            <label for="type-bing"><span style="color:#1a0dab">Bing</span></label>
+                        </li>
+
+                        <!-- 知乎 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-zhihu"
+                                value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎搜索">
+                            <label for="type-zhihu"><span style="color:#0084ff">知乎</span></label>
+                        </li>
+                        <!-- 京东 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-jd"
+                                value="https://search.jd.com/Search?keyword=" data-placeholder="京东搜索">
+                            <label for="type-jd"><span style="color:#e33333">京东</span></label>
+                        </li>
+
+                        <!-- 淘宝 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-taobao"
+                                value="https://s.taobao.com/search?q=" data-placeholder="淘宝搜索">
+                            <label for="type-taobao"><span style="color:#ff4400">淘宝</span></label>
+                        </li>
+
+                        <!-- 亚马逊 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-amazon"
+                                value="https://www.amazon.cn/s?k=" data-placeholder="亚马逊搜索">
+                            <label for="type-amazon"><span style="color:#146eb4">亚马逊</span></label>
+                        </li>
+
+                        <!-- 豆瓣 -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-douban"
+                                value="https://www.douban.com/search?source=suggest&q=" data-placeholder="豆瓣搜索">
+                            <label for="type-douban"><span style="color:#007722">豆瓣</span></label>
+                        </li>
+
+
                     </ul>
+
                 </div>
             </div>
-            <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+            <form action="" method="get" target="_blank" id="super-search-fm">
                 <input type="text" id="search-text" placeholder="百度一下" style="outline:0" autocomplete="off">
-                <button class="submit" type="submit"><svg style="width: 20px; height: 20px; margin:7px 0; color: #29f;"
-                        class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-sousuo"></use>
-                    </svg></button>
+                <style>
+                    .submit {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: none;
+                        border: 0;
+                        border-radius: 20px;
+                        width: 60px;
+                        height: 36px;
+                        margin: 7px 0 0;
+                        line-height: 36px;
+                        border-radius: 3px;
+                        outline: none;
+                    }
+                </style>
+                <button class="submit" type="submit">
+                    <!-- <svg style="margin:auto" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M26.657 14.3431C25.2093 12.8954 23.2093 12 21.0001 12C18.791 12 16.791 12.8954 15.3433 14.3431" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
+                    <svg style="width: 80%; height: 80%;" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
+                            fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+                        <path
+                            d="M26.657 14.3431C25.2093 12.8954 23.2093 12 21.0001 12C18.791 12 16.791 12.8954 15.3433 14.3431"
+                            stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
                 <ul id="word" style="display: none;"></ul>
             </form>
             <div class="set-check hidden-xs">
@@ -347,7 +441,7 @@ $link_icon = $theme_config->link_icon;
                 </li>
 
                 <!-- 遍历链接 -->
-                <?php 
+                <?php
                 $cache_file = 'cache/icons.json';
 
                 // 从文件中读取缓存数据
@@ -356,14 +450,14 @@ $link_icon = $theme_config->link_icon;
                 } else {
                     $cache = array();
                 }
-                
+
                 foreach ($links as $key => $link) {
                     // 根据用户的设置显示链接图标显示方式
                     if ($link_icon == "custom") {
                         $font_icon_url = $link['font_icon'];
-                
+
                         // 如果用户选择了自定义图标，但是却没有设置图标，则用默认图标
-                        if( empty($font_icon_url) ) {
+                        if (empty($font_icon_url)) {
                             $url = $link['url'];
                             // 检查缓存
                             if (isset($cache[$url])) {
@@ -377,9 +471,9 @@ $link_icon = $theme_config->link_icon;
                             }
                         }
                     } else {
-                        $font_icon_url = "/index.php?c=ico&text=".$link['title'];
+                        $font_icon_url = "/index.php?c=ico&text=" . $link['title'];
                     }
-                
+
                     // 判断是否是直连模式
                     if ($site['link_model'] === 'direct') {
                         $url = $link['url'];
@@ -404,7 +498,7 @@ $link_icon = $theme_config->link_icon;
                 if (!isset($_GET['cid']) && get_links_number($fid) > $link_num) {
                     ?>
                     <li class="col-3 col-sm-3 col-md-3 col-lg-1 link">
-                        <a rel="nofollow" href="/index.php?cid=<?php echo $category['id']; ?>" title="点此可查看该分类下的所有链接！">
+                        <a rel="nofollow" href="/index.php?cid=<?php echo $category['id']; ?>" title="点此可查看该分类下的所有链接">
                             <img src="/index.php?c=ico&text=M" alt="" />
                             <span>查看更多</span>
                         </a>
@@ -417,17 +511,129 @@ $link_icon = $theme_config->link_icon;
     </div>
 
     <script>
-        eval(function (e, t, a, c, i, n) {
-            if (i = function (e) { return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(36)) }, !"".replace(/^/, String)) {
-                for (; a--;) n[i(a)] = c[a] || i(a);
-                c = [function (e) { return n[e] }], i = function () { return "\\w+" }, a = 1
+        !(function () {
+            function g() {
+                h(), i(), j(), k();
             }
-            for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
-            return e
-        }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();', 62, 77, "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute".split("|"), 0, {}));
+            function h() {
+                d.checked = s();
+            }
+            function i() {
+                var a = document.querySelector('input[name="type"][value="' + p() + '"]');
+                a && ((a.checked = !0), l(a));
+            }
+            function j() {
+                v(u());
+            }
+            function k() {
+                w(t());
+            }
+            function l(a) {
+                for (var b = 0; b < e.length; b++) e[b].classList.remove("s-current");
+                a.parentNode.parentNode.parentNode.classList.add("s-current");
+            }
+            function m(a, b) {
+                window.localStorage.setItem("superSearch" + a, b);
+            }
+            function n(a) {
+                return window.localStorage.getItem("superSearch" + a);
+            }
+            function o(a) {
+                (f = a.target),
+                    v(u()),
+                    w(a.target.value),
+                    m("type", a.target.value),
+                    c.focus(),
+                    l(a.target);
+            }
+            function p() {
+                var b = n("type");
+                return b || a[0].value;
+            }
+            function q(a) {
+                m("newWindow", a.target.checked ? 1 : -1), x(a.target.checked);
+            }
+            function r(a) {
+                return (
+                    a.preventDefault(),
+                    "" == c.value
+                        ? (c.focus(), !1)
+                        : (w(t() + c.value),
+                            x(s()),
+                            s() ? window.open(b.action, +new Date()) : (location.href = b.action),
+                            void 0)
+                );
+            }
+            function s() {
+                var a = n("newWindow");
+                return a ? 1 == a : !0;
+            }
+            function t() {
+                return document.querySelector('input[name="type"]:checked').value;
+            }
+            function u() {
+                return document
+                    .querySelector('input[name="type"]:checked')
+                    .getAttribute("data-placeholder");
+            }
+            function v(a) {
+                c.setAttribute("placeholder", a);
+            }
+            function w(a) {
+                b.action = a;
+            }
+            function x(a) {
+                a ? (b.target = "_blank") : b.removeAttribute("target");
+            }
+            var y,
+                a = document.querySelectorAll('input[name="type"]'),
+                b = document.querySelector("#super-search-fm"),
+                c = document.querySelector("#search-text"),
+                d = document.querySelector("#set-search-blank"),
+                e = document.querySelectorAll(".search-group"),
+                f = a[0];
+            for (g(), y = 0; y < a.length; y++) a[y].addEventListener("change", o);
+            d.addEventListener("change", q), b.addEventListener("submit", r);
+        })();
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        //关键词sug
+        $(function () {
+            //当键盘键被松开时发送Ajax获取数据
+            $('#search-text').keyup(function () {
+                var keywords = $(this).val();
+                if (keywords == '') { $('#word').hide(); return };
+            })
+            //点击搜索数据复制给搜索框
+            $(document).on('click', '#word li', function () {
+                var word = $(this).text();
+                $('#search-text').val(word);
+                $('#word').empty();
+                $('#word').hide();
+                //$("form").submit();
+                $('.submit').trigger('click');//触发搜索事件
+            })
+            $(document).on('click', '.container,.banner-video,nav', function () {
+                $('#word').empty();
+                $('#word').hide();
+            })
+
+        })
+
+        function gotop() {
+            $("html,body").animate({ scrollTop: '0px' }, 600);
+        }
+
+
+        var h = holmes({
+            input: '#search-text',
+            find: '.link',
+            hiddenAttr: true
+        });
+    </script>
 </body>
 
 </html>
