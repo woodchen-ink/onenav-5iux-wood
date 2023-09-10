@@ -194,6 +194,24 @@ $link_icon = $theme_config->link_icon;
                                 value="https://exp.czl.net/track/?query=" data-placeholder="CZLExpress 国际快递查询">
                             <label for="type-czl"><span style="color:#2ea7e0">CZLExpress</span></label>
                         </li>
+                        <!-- DHL -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-dhl"
+                                value="https://www.dhl.com/cn-zh/home/tracking.html?submit=1&tracking-id=" data-placeholder="DHL国际快递查询">
+                            <label for="type-dhl"><span style="color:#ffff00">DHL</span></label>
+                        </li>
+                        <!-- UPS -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-ups"
+                                value="https://www.ups.com/track?loc=zh_CN&requester=QUIC&tracknum=" data-placeholder="UPS国际快递查询">
+                            <label for="type-ups"><span style="color:#a52a2a">UPS</span></label>
+                        </li>
+                        <!-- FEDEX -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-fedex"
+                                value="https://www.fedex.com/fedextrack/?trknbr=" data-placeholder="FEDEX国际快递查询">
+                            <label for="type-fedex"><span style="color:#800080">FEDEX</span></label>
+                        </li>
                         <!-- 百度 -->
                         <li>
                             <input checked="" hidden="" type="radio" name="type" id="type-baidu"
