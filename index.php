@@ -212,6 +212,13 @@ $link_icon = $theme_config->link_icon;
                                 value="https://www.fedex.com/fedextrack/?trknbr=" data-placeholder="FEDEX国际快递查询">
                             <label for="type-fedex"><span style="color:#800080">FEDEX</span></label>
                         </li>
+                        <!-- 通关网HS -->
+                        <li>
+                            <input hidden="" type="radio" name="type" id="type-tgwhs"
+                                value="http://kw.hscode.net/AI/AIItems?kw=" data-placeholder="通关网HS查询">
+                            <label for="type-tgwhs"><span style="color:#0084ff">通关网HS</span></label>
+                        </li>
+                        
                         <!-- 百度 -->
                         <li>
                             <input checked="" hidden="" type="radio" name="type" id="type-baidu"
