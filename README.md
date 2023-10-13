@@ -3,7 +3,9 @@
 > 作者的telegram群：https://t.me/woodschat2023  
 > AI交流群：https://t.me/ai_cn2023
 
-好用的话给个star吧。
+好用的话可以请我喝杯咖啡
+
+![IMG_1768.png](https://cdn-img-r2.czl.net/2023/10/13/6528c3c44100a.png)
 
 ## 示意图
 
