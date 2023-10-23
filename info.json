@@ -2,11 +2,11 @@
     "name": "5iux-wood定制版",
     "description": "原作者：https://github.com/5iux/5iux.github.io \n 定制者wood:https://woodchen.ink",
     "homepage": "https://github.com/woodchen-ink/onenav-5iux-wood",
-    "help_url":"https://t.me/woodschat2023",
+    "help_url":"",
     "version": "1.1.1-wood",
     "update": "2023/09/10",
     "author": "5iux/wood",
-    "screenshot": "https://cdn-img.czl.net/2023/09/10/64fcbc7d9628a.png",
+    "screenshot": "https://cdn-img-r2.czl.net/2023/09/10/64fcbc7d9628a.png",
     "demo":"",
     "require":{
         "min":"0.9.31",

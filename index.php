@@ -17,7 +17,6 @@ $link_icon = $theme_config->link_icon;
     </title>
     <meta name="keywords" content="<?php echo $site['keywords']; ?>" />
     <meta name="description" content="<?php echo $site['description']; ?>" />
-    <link rel="shortcut icon" href="https://cdn-img.czl.net/2023/06/20/649168ec9d6a8.ico">
     <?php
     if (empty($theme_config->shortcut_icon)) {
         ?>
@@ -36,12 +35,14 @@ $link_icon = $theme_config->link_icon;
     <!--QQ强制全屏-->
     <meta name="x5-page-mode" content="app">
     <!--QQ应用模式-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" id="font-awesome-css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" media="all">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holmes.js/1.17.3/js/holmes.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" id="font-awesome-css" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css"
+        type="text/css" media="all">
+    <!-- // 5.13 -->
+    <script src="https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 3.5.1 -->
+    <script src="https://cdn.staticfile.org/holmes.js/1.17.3/js/holmes.js"></script>
+
     <link rel='stylesheet' href='templates/<?php echo $template; ?>/style.css?v=<?php echo $info->version; ?>'>
     <?php echo $site['custom_header']; ?>
     <style>
@@ -71,14 +72,7 @@ $link_icon = $theme_config->link_icon;
         <a href="javascript:;" title="返回顶部" onclick="gotop()"><i class="fa fa-arrow-up"></i></a>
     </div>
     <!-- 返回顶部END -->
-    <script>
-        $.get("index.php?c=bing", function (data, status) {
-            var bg_img = 'https://cn.bing.com' + data.images[0].url;
-            $("#banner_bg img").attr("src", bg_img);
-            bg_html = "<style> html{background:url('" + bg_img + "') no-repeat center/cover;}</style>";
-            $("body").append(bg_html);
-        });
-    </script>
+   
     <!--topbar开始-->
     <style>
         .navbar-toggler svg {
@@ -133,7 +127,9 @@ $link_icon = $theme_config->link_icon;
                     <li class="nav-item active nav-cat">
                         <i class='<?php echo $category['font_icon']; ?>'></i>
                         <a class="nav-link" title="<?php echo $category['description']; ?>"
-                            href="/index.php?cid=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a>
+                            href="/index.php?cid=<?php echo $category['id']; ?>">
+                            <?php echo $category['name']; ?>
+                        </a>
                     </li>
                 <?php } ?>
                 <!-- 遍历父级分类END -->
@@ -197,13 +193,15 @@ $link_icon = $theme_config->link_icon;
                         <!-- DHL -->
                         <li>
                             <input hidden="" type="radio" name="type" id="type-dhl"
-                                value="https://www.dhl.com/cn-zh/home/tracking.html?submit=1&tracking-id=" data-placeholder="DHL国际快递查询">
+                                value="https://www.dhl.com/cn-zh/home/tracking.html?submit=1&tracking-id="
+                                data-placeholder="DHL国际快递查询">
                             <label for="type-dhl"><span style="color:#ffff00">DHL</span></label>
                         </li>
                         <!-- UPS -->
                         <li>
                             <input hidden="" type="radio" name="type" id="type-ups"
-                                value="https://www.ups.com/track?loc=zh_CN&requester=QUIC&tracknum=" data-placeholder="UPS国际快递查询">
+                                value="https://www.ups.com/track?loc=zh_CN&requester=QUIC&tracknum="
+                                data-placeholder="UPS国际快递查询">
                             <label for="type-ups"><span style="color:#a52a2a">UPS</span></label>
                         </li>
                         <!-- FEDEX -->
@@ -218,7 +216,7 @@ $link_icon = $theme_config->link_icon;
                                 value="http://kw.hscode.net/AI/AIItems?kw=" data-placeholder="通关网HS查询">
                             <label for="type-tgwhs"><span style="color:#0084ff">通关网HS</span></label>
                         </li>
-                        
+
                         <!-- 百度 -->
                         <li>
                             <input checked="" hidden="" type="radio" name="type" id="type-baidu"
@@ -623,7 +621,7 @@ $link_icon = $theme_config->link_icon;
 
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/bootstrap/5.3.2/js/bootstrap.min.js"></script>
     <script>
         //关键词sug
         $(function () {
@@ -658,6 +656,20 @@ $link_icon = $theme_config->link_icon;
             find: '.link',
             hiddenAttr: true
         });
+    </script>
+     <script>
+        $.get("index.php?c=bing", function (data, status) {
+            var bg_img = 'https://cn.bing.com' + data.images[0].url;
+            $("#banner_bg img").attr("src", bg_img);
+            bg_html = "<style> html{background:url('" + bg_img + "') no-repeat center/cover;}</style>";
+            $("body").append(bg_html);
+        }).fail(function () {
+            var default_bg_img = "https://cdn-img-r2.czl.net/2023/06/20/649169f6cfcf4.png"; // 默认背景图片路径
+            $("#banner_bg img").attr("src", default_bg_img);
+            bg_html = "<style> html{background:url('" + default_bg_img + "') no-repeat center/cover;}</style>";
+            $("body").append(bg_html);
+        });
+
     </script>
 </body>
 

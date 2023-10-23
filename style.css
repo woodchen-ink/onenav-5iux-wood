@@ -6,6 +6,7 @@ github：https://github.com/5iux/5iux.github.io
 版权所有，请勿删除
 */
 body{ font-size: 14px; background: #f4f8fb; overflow-x:hidden;  }
+body{background:url("https://cdn-img-r2.czl.net/2023/06/20/649169f6cfcf4.png") no-repeat center/cover;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
 svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
@@ -219,3 +220,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 	color: #000000; /* 鼠标悬停时改变文字颜色 */
 	transform: scale(1.05); /* 鼠标悬停时放大按钮 */
 }
+
+html, body, h1, h2, h3, h4, h5, h6, a, p, span, input, div, button, label, pre, select, option, textarea, th, td, li, em, strong, cite, q, dfn, abbr, time, var, samp, kbd, sub, sup, i, b, u, mark, ruby, rt, rp, bdi, bdo, s, small, del, ins, caption, figure, figcaption, main, nav, article, section, header, footer, aside, details, summary，code {
+    font-family:  -apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Segoe UI,Arial,Roboto,'PingFang SC',miui,'Hiragino Sans GB','Microsoft Yahei',sans-serif ;
+  }
