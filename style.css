@@ -222,5 +222,5 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 }
 
 html, body, h1, h2, h3, h4, h5, h6, a, p, span, input, div, button, label, pre, select, option, textarea, th, td, li, em, strong, cite, q, dfn, abbr, time, var, samp, kbd, sub, sup, i, b, u, mark, ruby, rt, rp, bdi, bdo, s, small, del, ins, caption, figure, figcaption, main, nav, article, section, header, footer, aside, details, summary，code {
-    font-family:  -apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Segoe UI,Arial,Roboto,'PingFang SC',miui,'Hiragino Sans GB','Microsoft Yahei',sans-serif ;
+    font-family:  system-ui,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Segoe UI,Arial,Roboto,'PingFang SC',miui,'Hiragino Sans GB','Microsoft Yahei',sans-serif ;
   }
