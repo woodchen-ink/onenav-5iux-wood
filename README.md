@@ -1,12 +1,5 @@
 # onenav-5iux-wood定制版
 
-> 作者的telegram群：https://t.me/woodschat2023  
-> AI交流群：https://t.me/ai_cn2023
-
-好用的话可以请我喝杯咖啡
-
-![IMG_1768.png](https://cdn-img-r2.czl.net/2023/10/13/6528c3c44100a.png)
-
 ## 示意图
 
 ![1694284920489.png](https://cdn-img.czl.net/2023/09/10/64fcbc7d9628a.png)
