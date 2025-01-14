@@ -2,7 +2,7 @@
 
 ## 示意图
 
-![1694284920489.png](https://cdn-img.czl.net/2023/09/10/64fcbc7d9628a.png)
+![1694284920489.png](https://i-cf.czl.net/r2/2023/09/10/64fcbc7d9628a.png)
 
 ## 使用方法
 
